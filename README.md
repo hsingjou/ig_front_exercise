@@ -15,6 +15,8 @@
 <li>當按鈕套用google icon，如果文字因此沒有辦法水平置中之解決辦法</li>
 <li>按下按鈕開啟div，點畫面上任一處（除被開啟之div外）能關閉該div之方法</li>
 <li>按下按鈕改變按鈕上之文字之方法</li>
+<li>調整元素position寫法</li>
+<li>inline-block之用法，以及和block、inline之差別</li>
 </ul>
 
 <h3>備註</h3>
