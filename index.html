@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css"> 
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>instagram網頁版切版練習</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <img class="logo_img" onclick="location.href='index.html'" src="data:image/png;base64,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">
+                <div class="menu">
+                    <button onclick="location.href='index.html'" style="vertical-align: middle;">
+                        <span class="material-symbols-outlined">
+                            home
+                            </span>
+                            &ensp;首頁</button><br>
+                    <button><span class="material-symbols-outlined">
+                        search
+                        </span>&ensp;搜尋
+                    </button><br>
+                    <button>
+                        <span class="material-symbols-outlined">
+                            explore
+                            </span>&ensp;探索</button><br>
+                    <button><span class="material-symbols-outlined">
+                        movie
+                        </span>&ensp;連續影片</button><br>
+                    <button><span class="material-symbols-outlined">
+                        sms
+                        </span>&ensp;訊息</button><br>
+                    <button><span class="material-symbols-outlined">
+                        favorite
+                        </span>&ensp;通知</button><br>
+                    <button><span class="material-symbols-outlined">
+                        add_box
+                        </span>&ensp;建立</button><br>
+                    <button><div style="display: inline-block;" class="my_dot"></div>&ensp;個人檔案</button><br>
+                    <div id="more_layout">
+                        <button>&ensp;設定</button><br>
+                        <button>&ensp;你的動態</button><br>
+                        <button>&ensp;我的珍藏</button><br>
+                        <button>&ensp;切換外觀</button><br>
+                        <button>&ensp;回報問題</button><br>
+                        <button class="change_account_btn">&ensp;切換帳號</button><br>
+                        <button>&ensp;登出</button>
+                    </div>
+                    <button class="moreBtn" id="more_btn">更多</button>
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-7">
+                <div class="stories" style="text-align: center;">
+                    <div class="story">
+                        <div class="dot_story" style="background-color: #fdf2f0;"></div>
+                        <button >fdf2f0</button>
+                    </div>
+                    <div class="story">
+                        <div class="dot_story" style="background-color: #f8d8e2;"></div>
+                        <button >f8d8e2</button>
+                    </div>
+                    <div class="story">
+                        <div class="dot_story" style="background-color: #deb3cf;"></div>
+                        <button>deb3cf</button>
+                    </div>
+                    <div class="story">
+                        <div class="dot_story" style="background-color: #b57fb3"></div>
+                        <button >b57fb3</button>
+                    </div>
+                    <div class="story">
+                        <div class="dot_story" style="background-color: #faf0e4;"></div>
+                        <button >faf0e4</button>
+                    </div>
+                    <div class="story">
+                        <div class="dot_story" style="background-color: #eecfbb;"></div>
+                        <button >eecfbb</button>
+                    </div>
+                    <div class="story">
+                        <div class="dot_story" style="background-color:#f6b99d"></div>
+                        <button >f6b99d</button>
+                    </div>
+                    <div class="story">
+                        <div class="dot_story" style="background-color: #cb8a90"></div>
+                        <button >cb8a90</button>
+                    </div>
+                    
+                </div>
+                <div>
+                    <div class="post_top">
+                        <div class="post_dot" style="background-color: #bfcdb7;"></div>
+                            <div style="display: inline-block;position: relative; left: 0%;top:40%;transform: translate(0%,-40%);">
+                                <div style="display: inline-block;cursor: pointer;">bfcdb7</div>
+                                <div style="display: inline-block; color: gray;"> • 7分鐘</div>
+                                <div style="display: inline-block;cursor: pointer;position: relative;left: 295%;top:0%;transform: translate(-295%,0%);" onclick="on_function()"> •••</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="function_overlay" onclick="off_function()">
+                        <div id="function_overlay_content">
+                            <button style="color: red;border-bottom: 1px solid gainsboro;">檢舉</button><br>
+                            <button style="color: red;border-bottom: 1px solid gainsboro;">取消追蹤</button><br>
+                            <button style="border-bottom: 1px solid gainsboro;">加到「最愛」</button><br>
+                            <button style="border-bottom: 1px solid gainsboro;">前往貼文</button><br>
+                            <button style="border-bottom: 1px solid gainsboro;">分享到.....</button><br>
+                            <button style="border-bottom: 1px solid gainsboro;">複製連結</button><br>
+                            <button style="border-bottom: 1px solid gainsboro;">內嵌</button><br>
+                            <button >取消</button>
+                        </div>
+                    </div>
+                    <div class="post" style="background:linear-gradient(135deg,#E6CAFF,	#FFF8D7,	#D2E9FF) ;"></div>
+                    <div class="feedback">
+                        <div style="display: inline-block;">
+                            <span class="material-symbols-outlined" style="cursor: pointer;">favorite</span>
+                            <span class="material-symbols-outlined" style="cursor: pointer;position: relative;left: 0%;top:0%;transform: translate(0%,0%);" onclick="on_comment()">chat_bubble</span>
+                            <span class="material-symbols-outlined" style="cursor: pointer;position: relative;left: 0%;top:0%;transform: translate(0%,0%);">send</span>
+                        </div>
+                        <div style="display: inline-block;">
+                            <span class="material-symbols-outlined" style="cursor: pointer;position: relative;left:190px;top:0%;transform: translate(190px,0%);">bookmark</span>
+                        </div>
+                    </div>
+                    <div class="said_good">
+                        <div style="cursor: pointer;" onclick="on_who_said_good()">5個讚</div>
+                    </div>
+                    <div id="who_said_good_overlay" onclick="off_who_said_good()">
+                        <div class="who_said_good_content">
+                            <div class="who_said_good_title">說讚的用戶</div>
+                            <div style="padding: 10px 20px" >
+                                <div class="dot_said_good" style="background: #FFD2D2;"></div>
+                                <div class="said_good_id" >ffd2d2</div>
+                                <div class="followed_btn" style=" position: relative;left: 61%;top: 50%;transform: translate(-61%,-50%);">追蹤中</div>
+                            </div>
+                           
+                            <div style="padding: 10px 20px" >
+                                <div class="dot_said_good" style="background: #b57fb3;"></div>
+                                <div class="said_good_id" >b57fb3</div>
+                                <div class="followed_btn" style=" position: relative;left: 60%;top: 50%;transform: translate(-60%,-50%);">追蹤中</div>
+                            </div>
+                            <div style="padding: 10px 20px" >
+                                <div class="dot_said_good" style="background: #FFF8D7;"></div>
+                                <div class="said_good_id" >ff8d7</div>
+                                <div class="followed_btn" style=" position: relative;left: 65%;top: 50%;transform: translate(-65%,-50%);">追蹤中</div>
+                            </div>
+                            <div style="padding: 10px 20px" >
+                                <div class="dot_said_good" style="background: #d2e9ff;"></div>
+                                <div class="said_good_id" >d2e9ff</div>
+                                <div class="followed_btn" style=" position: relative;left: 61%;top: 50%;transform: translate(-61%,-50%);">追蹤中</div>
+                            </div>
+                            <div style="padding: 10px 20px" >
+                                <div class="dot_said_good" style="background: #f8d812;"></div>
+                                <div class="said_good_id" >f8d812</div>
+                                <div class="followed_btn" style=" position: relative;left: 60%;top: 50%;transform: translate(-60%,-50%);">追蹤中</div>
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+                    <div class="post_content">
+                        <div style="display: inline-block;cursor: pointer;">bfcdb7  ✌🏻</div>
+                        <br>
+                        <div id="translateButton">翻譯年糕</div>
+                        <div class="see_all_comment" onclick="on_comment()">查看全部3則留言</div>
+                        <div style="width: 500px;margin: 0px auto 0px;border-bottom: 1px solid gray; height: 40px;" >
+                            <div style="display: inline-block;">
+                                <input type="text" placeholder="留言......">
+                            </div>
+                            <div style="display: inline-block;position: relative;left: 60%;top:0%;transform: translate(-60%,0%);">
+                                <span class="material-symbols-outlined" style=" font-size: 15px; cursor: pointer;">sentiment_satisfied</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="comment_overlay" onclick="off_comment()">
+                        <div id="comment_overlay_content">
+                            <div  style="background:linear-gradient(135deg,#E6CAFF, #FFF8D7, #D2E9FF) ; width: 450px;height: 650px; display: inline-block;">
+                            </div>
+                            <div style="display: inline-block;" class="comment_content">
+                                <div style="border-bottom:1px solid gainsboro">
+                                    <div class="post_dot_insideComment" style="display: inline-block;"></div>
+                                    <div class="id" style="display: inline-block;font-size: 18px; font-weight: 600;color: black;">bfcdb7</div>
+                                </div>
+                                <div>
+                                    <div class="post_dot_insideComment" style="display: inline-block;"></div>
+                                    <div class="id" style="display: inline-block;font-size: 18px; font-weight: 600;color: black;">bfcdb7 ✌🏻</div>
+                                </div>
+                                <div class="comments">
+                                    <div>
+                                        <div class="post_dot_insideComment" style="display: inline-block; background: #D2E9FF;"></div>
+                                        <div style="display: inline-block;">
+                                            <div class="feedback_id" style="display: inline-block;font-size: 18px; font-weight: 600;color: black;">d2e9ff</div>
+                                            <div class="feedback_content">?????</div>
+                                            <div class="post_time">2分鐘 讚 回覆 翻譯年糕</div>
+                                        </div>
+                                    
+                                    </div>
+                                    <div style=" position: relative;left: 0%;top: 50%;transform: translate(0%,-50%);">
+                                        <div class="post_dot_insideComment" style="display: inline-block; background: #FFF8D7;"></div>
+                                        <div style="display: inline-block;">
+                                            <div class="feedback_id" style="display: inline-block;font-size: 18px; font-weight: 600;color: black;">fff8d7</div>
+                                            <div class="feedback_content">這什麼</div>
+                                            <div class="post_time">1分鐘 讚 回覆 翻譯年糕</div>
+                                        </div>
+                                    
+                                    </div>
+                                    <div style=" position: relative;left: 0%;top: 100%;transform: translate(0%,-100%);">
+                                        <div class="post_dot_insideComment" style="display: inline-block; background: #f8d8e2;"></div>
+                                        <div style="display: inline-block;">
+                                            <div class="feedback_id" style="display: inline-block;font-size: 18px; font-weight: 600;color: black;">f8d8e2</div>
+                                            <div class="feedback_content">好美的顏色</div>
+                                            <div class="post_time">30秒 讚 回覆 翻譯年糕</div>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                                <div class="icons">
+                                    <span class="material-symbols-outlined" style="cursor: pointer;position: relative;left: 0%;top: 100%;transform: translate(0%,-100%);font-size: 25px;" >favorite</span>
+                                    <span class="material-symbols-outlined" style="cursor: pointer; position: relative;left: 0%;top: 100%;transform: translate(0%,-100%);font-size: 25px" >chat_bubble</span>
+                                    <span class="material-symbols-outlined" style="cursor: pointer;position: relative;left: 0%;top: 100%;transform: translate(0%,-100%);font-size: 25px">send</span>
+                                    <div style="display: inline-block;">
+                                        <span class="material-symbols-outlined" style="cursor: pointer;position: relative;left:150px;top:100%;transform: translate(150px,-100%);font-size: 25px">bookmark</span>
+                                    </div>
+                                    <div style="position:relative;left: 0%;top:50%;transform: translate(0%,-50%);">
+                                        <div style="font-size: 14px;">5個讚</div>
+                                        <div style="color: #9D9D9D; font-size: 12px;">7分鐘前</div>
+                                    </div>  
+                                </div>
+                                <div>
+                                    <div style="display: inline-block;">
+                                        <span class="material-symbols-outlined" style="color: black;position:relative;left: 0%;top:70%;transform: translate(0%,-70%);">
+                                            sentiment_satisfied
+                                        </span>
+                                    </div>
+                                    <div style="display: inline-block;">
+                                        <input type="text" placeholder="留言....." class="textbox">
+                                    </div>
+                                    <div class="submit">發佈</div>
+                                    
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                
+                </div>
+            <div class="col-sm-3">
+                <div class="my_account">
+                    <div class="dot_me"></div>
+                    <div class="id">colorful</div>
+                    <div class="another_accoubtn">切換</div>
+                </div>
+                <div class="recommend">
+                    <div class="recommend_text">為你推薦</div>
+                    <div class="see_all">查看全部</div>
+                    <div style="padding-top: 10px;">
+                        <div class="dot_recommend" style="background-color: #d1dfe8;"></div>
+                        <div class="recommend_id">d1dfe8<br><div style="color: #9D9D9D; font-size: 14px;">為你推薦</div></div>
+                        <div class="recommend_btn" style="cursor: pointer;position: relative;left: 52%;top:90%;transform: translate(-52%,-90%);"">追蹤</div>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <div class="dot_recommend" style="background-color: #B9B9FF;"></div>
+                        <div class="recommend_id">b9b9ff<br><div style="color: #9D9D9D; font-size: 14px;">eeb8b8的追蹤對象</div></div>
+                        <div class="recommend_btn"style="cursor: pointer;position: relative;left: 31%;top:90%;transform: translate(-31%,-90%);">追蹤</div>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <div class="dot_recommend" style="background-color: #FFD2D2;"></div>
+                        <div class="recommend_id">ffd2d2<br><div style="color: #9D9D9D; font-size: 14px;">b57fb3+其他3人的追...</div></div>
+                        <div class="recommend_btn"style="cursor: pointer;position: relative;left: 23%;top:90%;transform: translate(-23%,-90%);">追蹤</div>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <div class="dot_recommend" style="background-color: #F1E1FF;"></div>
+                        <div class="recommend_id">f1e1ff<br><div style="color: #9D9D9D; font-size: 14px;">fdf2f0+其他6人的追....</div></div>
+                        <div class="recommend_btn"style="cursor: pointer;position: relative;left: 24%;top:90%;transform: translate(-24%,-90%);">追蹤</div>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <div class="dot_recommend" style="background-color: #D2E9FF;"></div>
+                        <div class="recommend_id">d2e9ff<br><div style="color: #9D9D9D; font-size: 14px;">f6b99d的追蹤對象</div></div>
+                        <div class="recommend_btn"style="cursor: pointer;position: relative;left: 32%;top:90%;transform: translate(-32%,-90%);">追蹤</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var moreLayout = document.getElementById("more_layout");
+        var moreBtn = document.getElementById("more_btn");
+    
+        // 使用 JavaScript 來監聽按鈕點擊事件
+        moreBtn.addEventListener("click", function(event) {
+          event.stopPropagation(); // 防止點擊按鈕時觸發下面的點擊事件
+          moreLayout.style.display = "block";
+        });
+    
+        // 使用 JavaScript 來監聽整個文件的點擊事件
+        document.addEventListener("click", function(event) {
+          // 檢查被點擊的元素是否是 more_layout 或其子元素
+          if (event.target !== moreLayout && !moreLayout.contains(event.target)) {
+            moreLayout.style.display = "none";
+          }
+        });
+             
+        const translateButton = document.getElementById('translateButton');
+
+        // 初始狀態為翻譯年糕
+        let isTranslated = true;
+
+        // 監聽按鈕點擊事件
+        translateButton.addEventListener('click', function() {
+        // 根據當前狀態切換文本
+        if (isTranslated) {
+        translateButton.textContent = '查看原文';
+        } else {
+        translateButton.textContent = '翻譯年糕';
+        }
+
+        // 切換狀態
+        isTranslated = !isTranslated;
+        });
+        
+        // 打開留言內容的overlay
+        function on_comment() {
+        document.getElementById("comment_overlay").style.display = "block";
+        }
+        //關閉留言內容的overlay
+        function off_comment() {
+        document.getElementById("comment_overlay").style.display = "none";
+        }
+
+          // 打開其他功能的overlay
+        function on_function() {
+        document.getElementById("function_overlay").style.display = "block";
+        }
+        // 關閉其他功能的overlay
+        function off_function() {
+        document.getElementById("function_overlay").style.display = "none";
+        }
+
+        // 打開查看誰說讚的overlay
+        function on_who_said_good() {
+        document.getElementById("who_said_good_overlay").style.display = "block";
+        }
+        // 關閉誰說讚的的overlay
+        function off_who_said_good() {
+        document.getElementById("who_said_good_overlay").style.display = "none";
+        }
+
+      </script>
+
+</body>
+</html>
